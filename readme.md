@@ -1,6 +1,6 @@
 # Java 
 
-### Reading/Writing File
+### Reading/Writing File (Byte Stream)
 The most common method to read file (without using nio package) using io package is BufferedInputStream.
 As invoking disk for each byte is so expensive, so we create a buffer which is nothing but an array of byte. 
 So this buffer is of various size. you can choose 4000, 8000, or may be bigger.
@@ -28,3 +28,15 @@ So this buffer is of various size. you can choose 4000, 8000, or may be bigger.
 - For writing, stead of writing one byte, we write a whole buffer. Using both of methods:
     - write(buffer)
     - write(buffer, offset, length)
+    
+### Reading/Writing File (Character Stream)
+- ```
+    try(BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), 'UTF-8')))
+    {
+        String line;
+        while((line = br.readLine()) != null)
+        {
+            //do with line
+        }
+    }
+  ```
