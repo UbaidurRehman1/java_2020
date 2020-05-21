@@ -29,7 +29,7 @@ So this buffer is of various size. you can choose 4000, 8000, or may be bigger.
     - write(buffer)
     - write(buffer, offset, length)
     
-### Reading/Writing File (Character Stream)
+### Reading (Character Stream)
 - ```
     try(BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(file), 'UTF-8')))
     {
@@ -38,5 +38,13 @@ So this buffer is of various size. you can choose 4000, 8000, or may be bigger.
         {
             //do with line
         }
+    }
+  ```
+
+### Writing (Character Stream)
+- ```
+    try(BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(file), 'UTF-8')))
+    {
+        bw.write(string)
     }
   ```
