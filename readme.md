@@ -1,5 +1,5 @@
 # Java 
-
+# ------------------------------I/O---------------------------------
 ### Reading/Writing File (Byte Stream)
 The most common method to read file (without using nio package) using io package is BufferedInputStream.
 As invoking disk for each byte is so expensive, so we create a buffer which is nothing but an array of byte. 
@@ -48,3 +48,8 @@ So this buffer is of various size. you can choose 4000, 8000, or may be bigger.
         bw.write(string)
     }
   ```
+
+# ------------------------------Data Structure---------------------------------
+### Iterable 
+- Iterable is an interface which has method iterator which return Iterator.
+- A Class which implement Iterable interface, it gains the ability to iterate  
