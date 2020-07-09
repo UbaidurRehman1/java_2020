@@ -53,3 +53,26 @@ So this buffer is of various size. you can choose 4000, 8000, or may be bigger.
 ### Iterable 
 - Iterable is an interface which has method iterator which return Iterator.
 - A Class which implement Iterable interface, it gains the ability to iterate  
+
+# -----------------------------Generics----------------------------------------
+### Type Erasure
+- Its Compile time concept 
+- When Generic compile, then all its parameterized types removed in byte code and replaced with Object class (or bounded class)
+
+### Type Parameter
+- Class Level Type Parameter
+    - ```public class Mamals<T extends Human> { } ```
+- Method Level Type Parameter
+    -   ```public <T extends Shareable> T share(T shareable) { }```
+    
+### Wild Card
+- Upper Bound WildCard
+    - For Subtypes
+    - ```<? extends T>```
+    - It is used to display data (or Getting Data)
+- Lower Bound WildCard
+    - For SuperTypes 
+    - ```<? super T>```
+    - It is used to putting data (or updating data)
+- Unbounded wildcards 
+    - ```<?>```
