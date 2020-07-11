@@ -76,3 +76,19 @@ So this buffer is of various size. you can choose 4000, 8000, or may be bigger.
     - It is used to putting data (or updating data)
 - Unbounded wildcards 
     - ```<?>```
+    
+# -----------------------------Nested Classes----------------------------------------
+### Types
+- Static Nested Class
+- Instance Nested Class
+### Properties
+- Can access any members including private
+- Serve as helper
+- Represents components
+
+# -----------------------------Multi-threading----------------------------------------
+- Every Object has one lock
+- When we add ```synchronzied block or method``` 
+    - then only one thread can access at a time
+    - no other thread can access the other synchronized method when object is locked
+    - other threads can access non synchronized blocks or methods when object is locked 
