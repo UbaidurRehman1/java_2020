@@ -87,8 +87,16 @@ So this buffer is of various size. you can choose 4000, 8000, or may be bigger.
 - Represents components
 
 # -----------------------------Multi-threading----------------------------------------
-- Every Object has one lock
-- When we add ```synchronzied block or method``` 
-    - then only one thread can access at a time
-    - no other thread can access the other synchronized method when object is locked
-    - other threads can access non synchronized blocks or methods when object is locked 
+- ### Locking
+    - Every Object has one lock
+    - When we add ```synchronzied block or method``` 
+        - then only one thread can access at a time
+        - no other thread can access the other synchronized method when object is locked
+        - other threads can access non synchronized blocks or methods when object is locked
+- ### Volatile Variable
+    - Volatile variable ensure the memory visibility. It stores in the main memory on in the cache or registers.
+    - ```syncrhonization```  ensure both memory visibility and atomicity
+- ### Atomic variables 
+    - Atomic variables are not blocking while ```synchronize``` keyword is blocking. 
+    - Use Atomic variables where we want to update a single value cause atomic variables are not blocking. 
+        - Blocking is costly cause of thread suspension and then resumption
