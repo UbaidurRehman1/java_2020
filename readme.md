@@ -86,7 +86,7 @@ So this buffer is of various size. you can choose 4000, 8000, or may be bigger.
 - Serve as helper
 - Represents components
 
-# -----------------------------Multi-threading----------------------------------------
+# Multi-threading
 - ### Locking
     - Every Object has one lock
     - When we add ```synchronzied block or method``` 
@@ -94,9 +94,16 @@ So this buffer is of various size. you can choose 4000, 8000, or may be bigger.
         - no other thread can access the other synchronized method when object is locked
         - other threads can access non synchronized blocks or methods when object is locked
 - ### Volatile Variable
-    - Volatile variable ensure the memory visibility. It stores in the main memory on in the cache or registers.
+    - Volatile variable ensure the memory visibility. It stores in the main memory not in the cache or registers.
     - ```syncrhonization```  ensure both memory visibility and atomicity
 - ### Atomic variables 
     - Atomic variables are not blocking while ```synchronize``` keyword is blocking. 
     - Use Atomic variables where we want to update a single value cause atomic variables are not blocking. 
         - Blocking is costly cause of thread suspension and then resumption
+        
+- ### Wait and Notify
+    - Wait and Notify are the methods of Object Class
+    - Each Object has a lock
+    - When we call wait, then its mean we are locking the object
+    - When we call notify then we are releasing the lock
+    - Demo is in ```src/main/java/com/ubaid/concurrency/waitNotifyDemo/App.java```
