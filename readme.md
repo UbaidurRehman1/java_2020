@@ -1,5 +1,5 @@
 # Java 
-# ------------------------------I/O---------------------------------
+#I/O
 ### Reading/Writing File (Byte Stream)
 The most common method to read file (without using nio package) using io package is BufferedInputStream.
 As invoking disk for each byte is so expensive, so we create a buffer which is nothing but an array of byte. 
@@ -49,12 +49,12 @@ So this buffer is of various size. you can choose 4000, 8000, or may be bigger.
     }
   ```
 
-# ------------------------------Data Structure---------------------------------
+#Data Structure
 ### Iterable 
 - Iterable is an interface which has method iterator which return Iterator.
 - A Class which implement Iterable interface, it gains the ability to iterate  
 
-# -----------------------------Generics----------------------------------------
+#Generics
 ### Type Erasure
 - Its Compile time concept 
 - When Generic compile, then all its parameterized types removed in byte code and replaced with Object class (or bounded class)
@@ -77,7 +77,7 @@ So this buffer is of various size. you can choose 4000, 8000, or may be bigger.
 - Unbounded wildcards 
     - ```<?>```
     
-# -----------------------------Nested Classes----------------------------------------
+#Nested Classes
 ### Types
 - Static Nested Class
 - Instance Nested Class
@@ -107,3 +107,11 @@ So this buffer is of various size. you can choose 4000, 8000, or may be bigger.
     - When we call wait, then its mean we are locking the object
     - When we call notify then we are releasing the lock
     - Demo is in ```src/main/java/com/ubaid/concurrency/waitNotifyDemo/App.java```
+    
+- ### Interrupt 
+    - Thread method to interrupt (stop) the thread
+    - Some threads are uninterrupted in following condition
+        - Waiting in synchronized block
+        - Waiting for Stream IO
+        - Waiting for NIO     
+# Java Memory Model
